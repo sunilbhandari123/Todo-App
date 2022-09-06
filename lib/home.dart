@@ -1,136 +1,130 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:todoapp/buttons.dart';
 
-class Home extends StatelessWidget {
-  static const String id = 'Home';
-  const Home({Key? key}) : super(key: key);
+class Homme extends StatelessWidget {
+   final items = <Widget>[
+    const Icon(Icons.home, size: 25),
+    
+    const Icon(Icons.add_box_rounded, size: 25),
+    const Icon(Icons.settings, size: 25),
+   
+  ];
+  static const String id = 'Homme';
+  int index = 0;
+   
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
-      body: ListView(
-        children: [
-         Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          const Text(
-            'Create New Todo',
-            style: TextStyle(
-                color: Colors.black87, fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
-          const Text(
-            'Task Title',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: TextField(
-              onChanged: (value) {},
-              decoration: const InputDecoration(
-                hintText: 'Task Title',
-                hintStyle: TextStyle(color: Colors.black),
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
+        backgroundColor: Colors.white,
+        body: ListView(children: [
+          Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:[
+                 Text("Today's Schedule",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 35)),
+                 SizedBox(
+                  height: 30,
                 ),
-              ),
+                Row(
+                  children:[
+                  
+                
+                check(),
+                SizedBox(width: 25,),
+                Containers(),]),
+                SizedBox(height: 30,),
+                Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
             ),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          const Text(
-            'Task Type',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              const Padding(padding: EdgeInsets.fromLTRB(10, 0, 20, 0)),
-              bottton(text: 'Planned', colr: Colors.black, colour: Colors.grey, onTab: () {},),
-              const SizedBox(
-                width: 100,
-              ),
-              bottton(text: 'Important', colr: Colors.black, colour: Colors.grey, onTab: () {},),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          const Text(
-            'Descreption',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: TextField(
-              textAlign: TextAlign.start,
-              decoration: InputDecoration(
-                  hintText: 'Descreption',
-                  hintStyle: TextStyle(
-                    color: Colors.black,
-                  ),
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 60.0, horizontal: 20.0),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  )),
-            ),
-          ),
-          const SizedBox(height: 30,),
-          const Text('Category',style: TextStyle(fontWeight: FontWeight.bold),),
-          const SizedBox(
-            height: 20,
-          ),
-          Column(children: [
-            Row(children: [
-              const Padding(padding: EdgeInsets.fromLTRB(10, 0, 20, 0)),
-              bottton(
-                text: 'Food',
-                colr: Colors.black,
-                colour: Colors.grey, onTab: () {  },
-              ),
-              const SizedBox(width: 100),
-              bottton(
-                text: 'Work',
-                colr: Colors.black,
-                colour: Colors.grey, onTab: () {  },
-              ),
-            ]),
-            const SizedBox(height: 20),
-            Row(children: [
-              const Padding(padding: EdgeInsets.fromLTRB(10, 0, 20, 0)),
-              bottton(
-                text: 'Study',
-                colr: Colors.black,
-                colour: Colors.grey, onTab: () {  },
-              ),
-              const SizedBox(width: 70),
-              const Padding(padding: EdgeInsets.fromLTRB(10, 0, 20, 0)),
-              bottton(
-                text: 'Extras',
-                colr: Colors.black,
-                colour: Colors.grey, onTab: () {  },
-              ),
-            ]),
+            Containers(),
           ]),
-          const SizedBox(
-            height: 40,
+                
+          SizedBox(
+            height: 30,
           ),
-          bottton(text: 'Add Todo', colr: Colors.black, colour: Colors.white, onTab: () {  },)
+          Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
+            ),
+            Containers(),
+          ]),
+          SizedBox(
+            height: 30,
+          ),
+          Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
+            ),
+            Containers(),
+          ]),
+          SizedBox(
+            height: 30,
+          ),
+          Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
+            ),
+            Containers(),
+          ]),
+          SizedBox(
+            height: 30,
+          ),
+          Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
+            ),
+            Containers(),
+          ]),
+          SizedBox(
+            height: 30,
+          ),
+          Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
+            ),
+            Containers(),
+          ]),
+          SizedBox(
+            height: 30,
+          ),
+          Row(children: [
+            check(),
+            SizedBox(
+              width: 25,
+            ),
+            Containers(),
+          ]),
+          SizedBox(
+            height: 30,
+          ),
+             
+                
+                
+               
+              ]),
+              
         ]),
-      ]),
-    );
+        bottomNavigationBar: CurvedNavigationBar(
+        height: 60,
+        index: index,
+        backgroundColor: Colors.grey,
+        items: items,
+        onTap: (index) {
+          //Handle button tap
+        },
+      ),
+        );
   }
 }

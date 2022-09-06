@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:todoapp/home.dart';
+import 'package:todoapp/todoapp.dart';
 import 'package:todoapp/pages/login.dart';
 import 'package:todoapp/pages/register.dart';
 import 'package:todoapp/pages/signup.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
         Home.id: (context) => const Home(),
+        Homme.id: (context)=>   Homme(),
       },
     );
   }
