@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:todoapp/buttons.dart';
 
+
 class Homme extends StatelessWidget {
    final items = <Widget>[
     const Icon(Icons.home, size: 25),
@@ -36,14 +37,18 @@ class Homme extends StatelessWidget {
                 
                 check(),
                 SizedBox(width: 25,),
-                Containers(),]),
+                Containers(icon: Icon(Icons.alarm ,), text: 'Wake Up', textt: '5AM'
+                  
+                ,)]),
                 SizedBox(height: 30,),
                 Row(children: [
             check(),
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(
+              Icons.boy_rounded
+            ), text: 'GYM', textt: '6AM',),
           ]),
                 
           SizedBox(
@@ -54,7 +59,9 @@ class Homme extends StatelessWidget {
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(
+              Icons.book
+            ), text: 'Read', textt: '9AM',),
           ]),
           SizedBox(
             height: 30,
@@ -64,7 +71,9 @@ class Homme extends StatelessWidget {
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(
+              Icons.launch,
+            ), text: 'Lunch', textt: '10AM',),
           ]),
           SizedBox(
             height: 30,
@@ -74,7 +83,7 @@ class Homme extends StatelessWidget {
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(Icons.bed,), text: 'REST', textt: '11AM',),
           ]),
           SizedBox(
             height: 30,
@@ -84,7 +93,9 @@ class Homme extends StatelessWidget {
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(
+              Icons.code
+            ), text: 'Code', textt: '1PM',),
           ]),
           SizedBox(
             height: 30,
@@ -94,7 +105,9 @@ class Homme extends StatelessWidget {
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(
+              Icons.breakfast_dining,
+            ), text: 'Snacks', textt: '4PM',),
           ]),
           SizedBox(
             height: 30,
@@ -104,7 +117,9 @@ class Homme extends StatelessWidget {
             SizedBox(
               width: 25,
             ),
-            Containers(),
+            Containers(icon: Icon(
+              Icons.nordic_walking
+            ), text: 'Walk', textt: '6PM',),
           ]),
           SizedBox(
             height: 30,
